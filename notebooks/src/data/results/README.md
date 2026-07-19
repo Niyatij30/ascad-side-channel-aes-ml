@@ -1,1 +1,4 @@
-Saved plots and output graphs go here
+Project name :Hamming Weight Leakage Analysis: A Classical ML Approach to Side-Channel Attacks
+
+Description:
+This project performs a side-channel attack on AES encryption using classical machine learning, aiming to recover a secret key byte from a device's power consumption traces rather than through cryptographic weaknesses. We use the ASCAD dataset, a public collection of power traces recorded during AES encryption, each labeled with the Hamming Weight of the AES S-box output — a standard "leakage model" that links power usage to the underlying key data. After preprocessing and selecting the most informative points from each trace using SNR (signal-to-noise ratio) analysis, we train Random Forest and SVM classifiers to predict this Hamming Weight class. The model's predictions are then used to rank all possible key values across multiple traces, and performance is evaluated using two field-standard metrics — Guessing Entropy and Success Rate — which measure how many traces are needed before the correct key is reliably recovered, rather than simple classification accuracy.
